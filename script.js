@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== COUNTDOWN TIMER =====
-// Set your launch date here (Month is 0-indexed: 0 = January, 11 = December)
-const launchDate = new Date(2025, 11, 31, 23, 59, 59).getTime(); // December 31, 2025, 23:59:59
+// Set your launch date here (Month is 0-indexed: 0 = January, 10 = November)
+const launchDate = new Date(2025, 10, 20, 23, 59, 59).getTime(); // November 20, 2025, 23:59:59
 
 function updateCountdown() {
     const now = new Date().getTime();
