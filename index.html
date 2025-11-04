@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uskoro Stiže | Flores Premium Rakija</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-gradient"></div>
+    <canvas id="particles"></canvas>
+    
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="sr">SR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+            <!-- Logo/Brand Area -->
+            <div class="brand-section">
+                <div class="logo-glow"></div>
+                <h1 class="brand-title">
+                    <span class="brand-accent">FLORES</span>
+                    <span class="brand-subtitle" data-i18n="subtitle">Sajt u pripremi</span>
+                </h1>
+            </div>
+
+            <!-- Main Layout: Bottle Left, Content Right -->
+            <div class="main-layout">
+                <!-- Bottle Display - LEFT -->
+                <div class="bottle-container">
+                    <div class="bottle-glow"></div>
+                    <div class="bottle-wrapper">
+                        <img src="bottle.png" alt="Flores Bottle" class="bottle-image" id="bottle">
+                        <div class="sparkle sparkle-1"></div>
+                        <div class="sparkle sparkle-2"></div>
+                        <div class="sparkle sparkle-3"></div>
+                    </div>
+                </div>
+
+                <!-- Right Content Section -->
+                <div class="right-content">
+                    <!-- Coming Soon Text -->
+                    <div class="coming-soon-section">
+                        <!-- Countdown Timer -->
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="days">00</span>
+                                <span class="countdown-label" data-i18n="days">Dana</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="hours">00</span>
+                                <span class="countdown-label" data-i18n="hours">Sati</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="minutes">00</span>
+                                <span class="countdown-label" data-i18n="minutes">Minuta</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item countdown-seconds">
+                                <span class="countdown-value" id="seconds">00</span>
+                                <span class="countdown-label" data-i18n="seconds">Sekundi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Subscription -->
+                    <div class="subscription-section">
+                        <div class="glass-card">
+                            <h3 class="subscription-title" data-i18n="newsletter-title">Budite prvi obavešteni</h3>
+                            <p class="subscription-desc" data-i18n="newsletter-desc">Prijavite se i saznajte kada lansiramo</p>
+                            <form class="subscription-form" id="subscribeForm">
+                                <input 
+                                    type="email" 
+                                    placeholder="Vaša email adresa" 
+                                    data-i18n-placeholder="email-placeholder"
+                                    class="email-input"
+                                    id="emailInput"
+                                    required
+                                >
+                                <!-- Honeypot field for spam protection -->
+                                <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                                
+                                <button type="submit" class="subscribe-btn" id="subscribeBtn">
+                                    <span data-i18n="subscribe-btn">Prijavi se</span>
+                                    <div class="btn-glow"></div>
+                                </button>
+                            </form>
+                            
+                            <!-- Success Message -->
+                            <div class="message success-message" id="successMessage">
+                                <span data-i18n="success-message">✓ Uspešno ste se prijavili!</span>
+                            </div>
+                            
+                            <!-- Error Message -->
+                            <div class="message error-message" id="errorMessage">
+                                <span data-i18n="error-message">✗ Došlo je do greške, pokušajte ponovo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
